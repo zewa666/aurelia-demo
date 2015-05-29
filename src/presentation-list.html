@@ -1,0 +1,31 @@
+<template>
+  <section>
+    <h3>Presentations</h3>
+
+    <div class="col-xs-12 col-md-6">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>Title</td>
+            <td>Text</td>
+            <td>Img</td>
+            <td>Created</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr repeat.for="p of service.presentations">
+            <td>
+              <a href="#/presentation/${p.id}" class="btn-success btn">View</a>
+              <a href="#/presentation/${p.id}/edit" class="btn-primary btn">Edit</a>
+            </td>
+            <td>${p.title}</td>
+            <td>${p.text}</td>
+            <td><img src="${p.img}" /></td>
+            <td>${p.created}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</template>
